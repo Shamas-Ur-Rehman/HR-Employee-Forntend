@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .custom-scrollbar {
+    scrollbar-width: thin; /* Firefox */
+    scrollbar-color: rgb(222, 104, 1) #f9fafb; /* Firefox */
+  }
+
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;  /* Slimmer width */
+    height: 6px; /* Horizontal scrollbar */
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, rgb(222, 104, 1), rgb(176, 170, 170)); 
+    border-radius: 10px;
+    border: 2px solid #e5e7eb;
+    transition: background 0.3s ease;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(45deg, rgb(255, 136, 0), rgb(150, 150, 150));
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: #f9fafb;
+    border-radius: 10px;
+  }
+}
